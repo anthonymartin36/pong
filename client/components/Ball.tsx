@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function Ball() {
   const boardWidth = 600
@@ -12,35 +12,40 @@ export default function Ball() {
   const [x, setX] = useState(boardWidth / 2 - 10)
   const [y, setY] = useState(boardHeight / 2 - 10)
 
-  requestAnimationFrame(Tick)
-  function Tick() {
-    requestAnimationFrame(Tick)
+  useEffect(() => {
+    function tick() {
+      if (x >= boardWidth - 5 && velocityX > 0) {
+        setVelocityX((velocityX) => -velocityX * 1.1)
+        SetRandomYVelocity()
+      }
 
-    if (x >= boardWidth - 5 && velocityX > 0) {
-      setVelocityX(-velocityX * 1.1)
-      SetRandomYVelocity()
+      if (x <= 5 && velocityX < 0) {
+        setVelocityX((velocityX) => -velocityX * 1.1)
+        SetRandomYVelocity()
+      }
+
+      if (y >= boardHeight - 5 && velocityY > 0) {
+        setVelocityY((velocityY) => -velocityY)
+      }
+
+      if (y <= 5 && velocityY < 0) {
+        setVelocityY((velocityY) => -velocityY)
+      }
+
+      setX((x) => x + velocityX)
+
+      setY((y) => y + velocityY)
     }
 
-    if (x <= 5 && velocityX < 0) {
-      setVelocityX(-velocityX * 1.1)
-      SetRandomYVelocity()
+    function SetRandomYVelocity() {
+      setVelocityY(Math.floor(Math.random() * maxVelocityY * 2 - maxVelocityY))
     }
 
-    if (y >= boardHeight - 5 && velocityY > 0) {
-      setVelocityY(-velocityY)
+    const token = setInterval(tick, 1000 / 60)
+    return () => {
+      clearInterval(token)
     }
-
-    if (y <= 5 && velocityY < 0) {
-      setVelocityY(-velocityY)
-    }
-
-    setX(x + velocityX)
-    setY(y + velocityY)
-  }
-
-  function SetRandomYVelocity() {
-    setVelocityY(Math.floor(Math.random() * maxVelocityY * 2 - maxVelocityY))
-  }
+  }, [x, y, velocityX, velocityY])
 
   return (
     <div
