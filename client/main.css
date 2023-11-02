@@ -11,3 +11,30 @@ h1 {
 .game {
  text-align: center;
 }
+
+.layout {
+  display:grid;
+  grid-template-areas:
+  'header header header header header header'
+  'left main main main main right';
+  align-items: center;
+  justify-content: center;
+}
+
+.Header{
+  grid-area: header;
+
+}
+
+.GameBoard {
+  grid-area: main;
+  width: 600px;
+  height: 500px;
+  justify-content: center;
+  margin: 10vh;
+  background-color: #b2e4ab;
+  color: black;
+  border: solid 5px;
+  border-color:white ;
+}
+
