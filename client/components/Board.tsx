@@ -7,11 +7,11 @@ function Board() {
 
   return (
     <div id="Board" className="GameBoard">
-      <PaddleL />
+      {/* <PaddleL /> */}
 
       <Ball />
 
-      <PaddleR />
+      {/* <PaddleR /> */}
     </div>
   )
 }
