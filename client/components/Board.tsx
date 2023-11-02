@@ -9,7 +9,7 @@ function Board() {
     <div id="Board" className="GameBoard">
       <PaddleL />
 
-      <Ball />
+      {/* <Ball /> */}
 
       <PaddleR />
     </div>

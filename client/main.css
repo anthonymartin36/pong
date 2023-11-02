@@ -27,6 +27,7 @@ h1 {
 }
 
 .GameBoard {
+  position: relative;
   grid-area: main;
   width: 600px;
   height: 500px;
@@ -36,5 +37,22 @@ h1 {
   color: black;
   border: solid 5px;
   border-color:white ;
+  /* border-left-color: red; */
 }
 
+.PaddleL {
+  position: absolute;
+  width: 1%;
+  height: 60px;
+  margin-left: 2%;
+  background-color: white;
+}
+
+
+.PaddleR {
+  position: absolute;
+  width: 1%;
+  height: 60px;
+  margin-left: 98%;
+  background-color: white;
+}
