@@ -4,14 +4,13 @@ import Ball from './Ball'
 
 function Board() {
   //console.log('Hello World')
-
   return (
     <div id="Board" className="GameBoard">
-      <PaddleL />
+      {/* <PaddleL /> */}
 
       {/* <Ball /> */}
 
-      <PaddleR />
+      {/* <PaddleR /> */}
     </div>
   )
 }
