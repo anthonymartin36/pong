@@ -7,11 +7,13 @@ function Board() {
 
   return (
     <div id="Board" className="GameBoard">
+      <div className="goalL"></div>
       <PaddleL />
 
       {/* <Ball /> */}
 
       <PaddleR />
+      <div className="goalR"></div>
     </div>
   )
 }

@@ -9,7 +9,7 @@ function PaddleL() {
       //get current location
       //get event request (up/down)
       //set direction of div tag
-      console.log(evt.key, evt.code, evt.keyCode)
+      console.log(evt) //evt.code, evt.keyCode)
       if (evt.key === 's') {
         setPosition((p) => Math.min(p + 10, 440))
       }

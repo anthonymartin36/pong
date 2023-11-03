@@ -9,13 +9,13 @@ function PaddleR() {
       //get current location
       //get event request (up/down)
       //set direction of div tag
-      console.log(evt.key, evt.code, evt.keyCode)
+      //console.log(evt.key, evt.code, evt.keyCode)
       if (evt.key === 'ArrowDown') {
-        setPosition((p) => Math.min(p + 10, 440))
+        setPosition((p) => Math.min(p + 20, 440))
       }
 
       if (evt.key === 'ArrowUp') {
-        setPosition((p) => Math.max(p - 10, 0))
+        setPosition((p) => Math.max(p - 20, 0))
       }
     }
 
