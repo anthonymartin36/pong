@@ -30,3 +30,5 @@ function PaddleR() {
 }
 
 export default PaddleR
+
+// FooBar
