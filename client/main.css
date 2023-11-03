@@ -15,26 +15,37 @@ h1 {
   display:grid;
   grid-template-areas:
   'header header header header header header'
-  'left main main main main right';
+  'game game game game game game'
+  'footer footer footer footer footer footer';
+  gap:10px;
   align-items: center;
   justify-content: center;
 }
 
 .Header{
-  grid-area: header;
+  grid-area:header;
 
+}
+
+.styleOpts{
+  position:relative;
+  grid-area: game;
+  background-color: white;
+  border:solid;
+  z-index:2;
 }
 
 .GameBoard {
   position: relative;
-  grid-area: main;
+  grid-area: game;
   width: 600px;
   height: 500px;
   justify-content: center;
   margin: 10vh;
-  background-color: #b2e4ab;
+  /* background-color: #b2e4ab; */
   border: solid 5px;
-  border-color:white ;
+  /* border-color:white ; */
+  z-index:1;
 }
 
 .goalL{
@@ -48,7 +59,7 @@ h1 {
 }
 
 .goalR{
-  position: relative;
+  position: absol;
   width:10px;
   height: 200px;
   margin-left: 590px;
@@ -80,4 +91,8 @@ h1 {
   background-color: white;
   border-radius: 50%;
   left: 0px;
+}
+
+.clicker {
+  
 }
