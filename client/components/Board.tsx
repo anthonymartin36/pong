@@ -4,13 +4,12 @@ import Ball from './Ball'
 
 function Board() {
   //console.log('Hello World')
-
   return (
     <div id="Board" className="GameBoard">
       <div className="goalL"></div>
       <PaddleL />
 
-      {/* <Ball /> */}
+      <Ball />
 
       <PaddleR />
       <div className="goalR"></div>
@@ -19,4 +18,4 @@ function Board() {
 }
 
 export default Board
-// FooBar
+
