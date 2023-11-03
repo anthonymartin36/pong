@@ -6,13 +6,16 @@ function Board() {
   //console.log('Hello World')
   return (
     <div id="Board" className="GameBoard">
-      {/* <PaddleL /> */}
+      <div className="goalL"></div>
+      <PaddleL />
 
-      {/* <Ball /> */}
+      <Ball />
 
-      {/* <PaddleR /> */}
+      <PaddleR />
+      <div className="goalR"></div>
     </div>
   )
 }
 
 export default Board
+
